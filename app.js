@@ -2,6 +2,19 @@ function naverSearch(query) {
   return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 }
 
+function parkingSearch(location) {
+  if (location.type === "stay") return null;
+  const query =
+    location.type === "food"
+      ? `${location.korean} 주변 공영주차장`
+      : `${location.korean} 주차장`;
+
+  return {
+    label: location.type === "food" ? "附近公營停車" : "景點停車場",
+    url: naverSearch(query)
+  };
+}
+
 const locations = [
   {
     day: "7/30",
@@ -336,7 +349,8 @@ function normalizeText(value) {
 
 function matchesLocation(location, term) {
   if (!term) return true;
-  return [location.day, location.dayTitle, location.type, location.city, location.name, location.korean, location.note]
+  const parking = parkingSearch(location);
+  return [location.day, location.dayTitle, location.type, location.city, location.name, location.korean, location.note, parking?.label]
     .join(" ")
     .toLowerCase()
     .includes(term);
@@ -346,6 +360,7 @@ function createLocationCard(location) {
   const article = document.createElement("article");
   article.className = `location-card ${location.type}-card`;
   article.dataset.type = location.type;
+  const parking = parkingSearch(location);
 
   article.innerHTML = `
     <div class="card-top">
@@ -360,8 +375,10 @@ function createLocationCard(location) {
       <span>${location.city}</span>
     </div>
     <p class="note">${location.note}</p>
-    <div class="actions">
+    ${parking ? `<p class="parking-note">停車搜尋：${parking.label}</p>` : ""}
+    <div class="actions ${parking ? "has-parking" : ""}">
       <a class="nav-button" href="${location.url}" target="_blank" rel="noopener">開啟 Naver Map</a>
+      ${parking ? `<a class="parking-button" href="${parking.url}" target="_blank" rel="noopener">找附近停車</a>` : ""}
       <button class="copy-button" type="button" data-url="${location.url}">複製</button>
     </div>
   `;
