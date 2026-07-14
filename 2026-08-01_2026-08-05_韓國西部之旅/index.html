@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eef4f0">
+    <title>韓國西部之旅 Naver 導航</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">2026.08 韓國西部之旅</p>
+        <h1>Naver 導航地點</h1>
+      </div>
+      <p class="header-note">住宿、景點、美食點快速開啟 Naver Map。</p>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="篩選地點">
+        <div class="search-wrap">
+          <label for="searchInput">搜尋</label>
+          <input id="searchInput" type="search" placeholder="輸入城市、地點、韓文">
+        </div>
+        <div class="filter-row" role="group" aria-label="類型篩選">
+          <button class="filter-chip active" type="button" data-filter="all">全部</button>
+          <button class="filter-chip stay-filter" type="button" data-filter="stay">住宿</button>
+          <button class="filter-chip spot-filter" type="button" data-filter="spot">景點</button>
+          <button class="filter-chip food-filter" type="button" data-filter="food">美食</button>
+        </div>
+        <div class="date-row" role="group" aria-label="日期篩選">
+          <button class="date-chip active" type="button" data-date="all">全部日期</button>
+          <button class="date-chip" type="button" data-date="7/30">7/30</button>
+          <button class="date-chip" type="button" data-date="7/31">7/31</button>
+          <button class="date-chip" type="button" data-date="8/1">8/1</button>
+          <button class="date-chip" type="button" data-date="8/2">8/2</button>
+          <button class="date-chip" type="button" data-date="8/3">8/3</button>
+          <button class="date-chip" type="button" data-date="8/4">8/4</button>
+          <button class="date-chip" type="button" data-date="8/5">8/5</button>
+        </div>
+      </section>
+
+      <section class="notice">
+        <strong>待確認</strong>
+        <span>原文件 Day 6、Day 7 都標示 8/4；此頁暫將江華島排在 8/5。若日期修正，只要改地點資料即可。</span>
+      </section>
+
+      <section id="locationGroups" class="groups" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <p>來源：Google Doc「2026.08.數位人文團韓國西岸行」。本頁不放護照、身分證、生日等個資。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
