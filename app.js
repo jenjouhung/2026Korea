@@ -144,7 +144,7 @@ const locations = [
     name: "Green Mate 獨立民宿",
     korean: "Green Mate",
     url: "https://naver.me/Fm31NkyW",
-    note: "8/1 扶餘住宿點。"
+    note: "8/1 扶餘住宿點；15:00 後入住，入住密碼出發前 48 小時於 Airbnb 取得。"
   },
   {
     day: "8/2",
@@ -224,7 +224,7 @@ const locations = [
     name: "Gongju Goma Guesthouse",
     korean: "공주 고마 게스트하우스",
     url: "https://naver.me/FRLnII5f",
-    note: "8/2 公州住宿點。"
+    note: "8/2 公州住宿點；15:00 入住，提供車位，2 樓客廳 08:00-10:00 有簡易早餐。"
   },
   {
     day: "8/3",
@@ -233,8 +233,8 @@ const locations = [
     city: "公州",
     name: "公山城",
     korean: "공산성",
-    url: naverSearch("공산성"),
-    note: "8/3 上午預定景點。此項為 Naver Map 搜尋連結。"
+    url: "https://naver.me/xf5AR5s5",
+    note: "8/3 上午預定景點。"
   },
   {
     day: "8/3",
@@ -243,8 +243,8 @@ const locations = [
     city: "公州",
     name: "公州山城市場",
     korean: "공주산성시장",
-    url: naverSearch("공주산성시장"),
-    note: "8/3 上午預定地點。此項為 Naver Map 搜尋連結。"
+    url: "https://naver.me/5qDjljGp",
+    note: "8/3 上午預定地點。"
   },
   {
     day: "8/3",
@@ -254,7 +254,57 @@ const locations = [
     name: "水原星空圖書館",
     korean: "별마당도서관 수원",
     url: naverSearch("별마당도서관 수원"),
-    note: "8/3 預定景點。此項為 Naver Map 搜尋連結。"
+    note: "8/3 預定景點，位於 Starfield 水原大型購物中心內。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/3",
+    dayTitle: "公州往水原",
+    type: "food",
+    city: "水原",
+    name: "本水原排骨",
+    korean: "본수원갈비",
+    url: naverSearch("본수원갈비"),
+    note: "水原三大排骨名店之一，開業超過 50 年。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/3",
+    dayTitle: "公州往水原",
+    type: "food",
+    city: "水原",
+    name: "明成豬排骨",
+    korean: "명성돼지갈비",
+    url: naverSearch("명성돼지갈비 수원"),
+    note: "位於長安門附近二樓的豬排骨店，用餐時段人潮較多。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/3",
+    dayTitle: "公州往水原",
+    type: "food",
+    city: "水原",
+    name: "麻浦本家排骨",
+    korean: "마포본가",
+    url: naverSearch("마포본가 수원"),
+    note: "水原地區評價不錯的排骨候選店。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/3",
+    dayTitle: "公州往水原",
+    type: "food",
+    city: "水原",
+    name: "水原雙龍閣炸醬麵",
+    korean: "쌍용각",
+    url: naverSearch("쌍용각 수원"),
+    note: "炸醬麵候選店，規劃書標註份量大、價格便宜。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/3",
+    dayTitle: "公州往水原",
+    type: "food",
+    city: "水原",
+    name: "行宮刨冰",
+    korean: "행궁빙수",
+    url: naverSearch("행궁빙수"),
+    note: "水原華城行宮與長安門一帶的刨冰候選店。此項為 Naver Map 搜尋連結。"
   },
   {
     day: "8/3",
@@ -264,7 +314,7 @@ const locations = [
     name: "Dono 1796 Hotel Suwon",
     korean: "도노 1796 호텔",
     url: "https://naver.me/xGIPa4Ml",
-    note: "8/3 水原華城內住宿點。"
+    note: "8/3 水原華城內住宿點；15:00 入住，提供車位，不含早餐，可現場加購。"
   },
   {
     day: "8/4",
