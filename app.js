@@ -334,7 +334,7 @@ const locations = [
     city: "仁川",
     name: "Orakai Songdo Park Hotel",
     korean: "오라카이 송도파크 호텔",
-    url: "https://naver.me/5huaWNDC",
+    url: "https://naver.me/5HkaBiQw",
     note: "8/4-8/5 仁川松島住宿點。"
   },
   {
