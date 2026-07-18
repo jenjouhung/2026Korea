@@ -961,14 +961,10 @@ window.storyPlaceDetails = [
       {
         "label": "SEE&SEE 빌딩",
         "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%98%88%EC%88%A0%EB%A1%9C%20198%20SEE%26SEE%20%EB%B9%8C%EB%94%A9"
-      },
-      {
-        "label": "附近加油地點",
-        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%98%88%EC%88%A0%EB%A1%9C%20198%20%EC%A3%BC%EB%B3%80%20%EC%A3%BC%EC%9C%A0%EC%86%8C"
       }
     ],
     "description": [
-      "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。還車前請先加油，導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000。抵達後開入地下停車場，找標示 롯데렌터카 的專用車位，再到 2 樓 268 號樂天租車辦公室交車。"
+      "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000；抵達後開入地下停車場，找 롯데렌터카 專用車位，或停在無障礙/一般空位後，再到 2 樓 268 號辦公室交車。"
     ],
     "images": [],
     "kindLabel": "景點"

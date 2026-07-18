@@ -445,10 +445,8 @@ const locations = [
     name: "還車地點：樂天租車仁川市區店",
     korean: "SEE&SEE 빌딩",
     url: naverSearch("인천광역시 남동구 예술로 198 SEE&SEE 빌딩"),
-    note: "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000；抵達後開入地下停車場，找 롯데렌터카 專用車位，再到 2 樓 268 號辦公室交車。",
-    skipParking: true,
-    fuelUrl: naverSearch("인천광역시 남동구 예술로 198 주변 주유소"),
-    fuelLabel: "附近加油地點"
+    note: "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000；抵達後開入地下停車場，找 롯데렌터카 專用車位，或停在無障礙/一般空位後，再到 2 樓 268 號辦公室交車。",
+    skipParking: true
   }
 ];
 
@@ -633,12 +631,6 @@ function createLocationCard(location) {
   article.className = `location-card ${location.type}-card`;
   article.dataset.type = location.type;
   const parking = parkingSearch(location);
-  const fuel = location.fuelUrl
-    ? {
-        label: location.fuelLabel || "附近加油地點",
-        url: location.fuelUrl
-      }
-    : null;
 
   article.innerHTML = `
     <div class="card-top">
@@ -654,11 +646,9 @@ function createLocationCard(location) {
     </div>
     <p class="note">${location.note}</p>
     ${parking ? `<p class="parking-note">停車搜尋：${parking.label}</p>` : ""}
-    ${fuel ? `<p class="parking-note">還車前提醒：請先加油，可用下方按鈕搜尋附近加油站。</p>` : ""}
-    <div class="actions ${parking || fuel ? "has-parking" : ""}">
+    <div class="actions ${parking ? "has-parking" : ""}">
       <a class="nav-button" href="${location.url}" target="_blank" rel="noopener">開啟 Naver Map</a>
       ${parking ? `<a class="parking-button" href="${parking.url}" target="_blank" rel="noopener">找附近停車</a>` : ""}
-      ${fuel ? `<a class="parking-button fuel-button" href="${fuel.url}" target="_blank" rel="noopener">${fuel.label}</a>` : ""}
       <button class="copy-button" type="button" data-url="${location.url}">複製</button>
     </div>
   `;
