@@ -363,11 +363,11 @@ const locations = [
     type: "spot",
     city: "仁川",
     name: "還車地點：樂天租車仁川市區店",
-    korean: "SEE&SEE 빌딩 롯데렌터카",
-    url: naverSearch("SEE&SEE 빌딩 롯데렌터카 0328818000"),
+    korean: "SEE&SEE 빌딩",
+    url: naverSearch("인천광역시 남동구 예술로 198 SEE&SEE 빌딩"),
     note: "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000；抵達後開入地下停車場，找 롯데렌터카 專用車位，再到 2 樓 268 號辦公室交車。",
     skipParking: true,
-    fuelUrl: naverSearch("SEE&SEE 빌딩 주변 주유소"),
+    fuelUrl: naverSearch("인천광역시 남동구 예술로 198 주변 주유소"),
     fuelLabel: "附近加油地點"
   }
 ];
@@ -631,7 +631,7 @@ function createStoryPlaceBlock(place) {
       ` : ""}
       ${links.length ? `
         <div class="story-place-links">
-          ${navigationLink ? `<a href="${escapeHtml(navigationLink.href)}" target="_blank" rel="noopener">Naver Map</a>` : ""}
+          ${navigationLink ? `<a href="${escapeHtml(navigationLink.href)}" target="_blank" rel="noopener">${escapeHtml(navigationLink.label || "Naver Map")}</a>` : ""}
           ${sourceLinks.map((link) => `
             <a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label || "參考資料")}</a>
           `).join("")}

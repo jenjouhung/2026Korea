@@ -32,7 +32,7 @@ window.storyPlaceDetails = [
       }
     ],
     "description": [
-      "11:00 從大田站一帶搭 UBER 前往樂天租車大田店取車，預計 12:00 取車完畢後開車前往扶餘。這是自駕行程正式開始的關鍵節點。"
+      "11:00 從大田站一帶搭 UBER 前往樂天租車大田店取車(Lotte rent a car Daejeon branch)。預計 12:00 取車完畢後開車前往扶餘。自駕行程正式開始！！"
     ],
     "images": [],
     "kindLabel": "景點"
@@ -959,12 +959,12 @@ window.storyPlaceDetails = [
     "title": "15:00 出發前往仁川市區還車",
     "links": [
       {
-        "label": "還車地點",
-        "href": "https://map.naver.com/p/search/SEE%26SEE%20%EB%B9%8C%EB%94%A9%20%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%200328818000"
+        "label": "SEE&SEE 빌딩",
+        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%98%88%EC%88%A0%EB%A1%9C%20198%20SEE%26SEE%20%EB%B9%8C%EB%94%A9"
       },
       {
         "label": "附近加油地點",
-        "href": "https://map.naver.com/p/search/SEE%26SEE%20%EB%B9%8C%EB%94%A9%20%EC%A3%BC%EB%B3%80%20%EC%A3%BC%EC%9C%A0%EC%86%8C"
+        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EB%8F%99%EA%B5%AC%20%EC%98%88%EC%88%A0%EB%A1%9C%20198%20%EC%A3%BC%EB%B3%80%20%EC%A3%BC%EC%9C%A0%EC%86%8C"
       }
     ],
     "description": [
