@@ -17,36 +17,6 @@ function parkingSearch(location) {
 
 const locations = [
   {
-    day: "7/30",
-    dayTitle: "抵達首爾",
-    type: "stay",
-    city: "首爾",
-    name: "首爾仁寺洞 IBIS 酒店",
-    korean: "이비스 앰배서더 서울 인사동",
-    url: "https://naver.me/FY3ylqo0",
-    note: "B 團 7/30-7/31 住宿。"
-  },
-  {
-    day: "7/31",
-    dayTitle: "清州抵達與大田",
-    type: "spot",
-    city: "清州",
-    name: "清州機場火車站",
-    korean: "청주공항역",
-    url: "https://naver.me/5VlFw1GG",
-    note: "清州機場外步行約 5 分鐘，無人站，建議先線上購票。"
-  },
-  {
-    day: "7/31",
-    dayTitle: "清州抵達與大田",
-    type: "stay",
-    city: "大田",
-    name: "Hotel Stendhal",
-    korean: "스탕달호텔",
-    url: "https://naver.me/5S9jq06W",
-    note: "大田住宿點。"
-  },
-  {
     day: "8/1",
     dayTitle: "大田集合往扶餘",
     type: "spot",
@@ -384,45 +354,9 @@ const typeLabels = {
   food: "美食"
 };
 
-const groupOrder = ["7/30", "7/31", "8/1", "8/2", "8/3", "8/4", "8/5"];
+const groupOrder = ["8/1", "8/2", "8/3", "8/4", "8/5"];
 const storyPlaceDetails = Array.isArray(window.storyPlaceDetails) ? window.storyPlaceDetails : [];
 const itineraryDays = [
-  {
-    day: "7/30",
-    title: "抵達首爾",
-    summary: "B 團先抵達首爾，住宿在仁寺洞一帶。這一天以安頓、休息與準備後續移動為主。",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Incheon%20International%20Airport%20Station%2020150304%20114454.jpg",
-    imageAlt: "仁川國際機場站",
-    highlights: ["首爾仁寺洞", "IBIS 酒店", "先行抵達"],
-    details: [
-      {
-        name: "抵達與調整",
-        text: "先抵達的成員以進入韓國、前往住宿、整理行李與調整作息為主，保留體力給後面幾天較密集的移動。"
-      },
-      {
-        name: "仁寺洞周邊",
-        text: "住宿點在首爾傳統文化與餐飲都方便的區域，若還有精神，可用短距離散步熟悉韓國街區節奏。"
-      }
-    ]
-  },
-  {
-    day: "7/31",
-    title: "清州抵達與大田",
-    summary: "從清州機場銜接鐵路交通，移動到大田住宿，為隔天全員集合與自駕行程做準備。",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Daejeon%20Station.jpg",
-    imageAlt: "大田站外觀",
-    highlights: ["清州機場火車站", "大田", "Hotel Stendhal"],
-    details: [
-      {
-        name: "清州進入韓國中部",
-        text: "這一天的重點是從清州順利接上鐵路與市區移動，讓大家逐步會合到大田。"
-      },
-      {
-        name: "大田作為集合點",
-        text: "大田位於韓國交通核心位置，隔天從這裡集合後展開往扶餘、公州、水原與仁川的自駕旅程。"
-      }
-    ]
-  },
   {
     day: "8/1",
     title: "大田集合往扶餘",

@@ -1,51 +1,5 @@
 window.storyPlaceDetails = [
   {
-    "day": "7/30",
-    "dayTitle": "(7/30) 抵達首爾",
-    "kind": "stay",
-    "title": "首爾仁寺洞 IBIS 酒店",
-    "links": [
-      {
-        "label": "MAP",
-        "href": "https://naver.me/FY3ylqo0"
-      }
-    ],
-    "description": [
-      "31, Samil-daero 30-gil, Jongno-gu, Seoul, Korea"
-    ],
-    "images": [
-      "assets/trip/01-ibis-1.jpg",
-      "assets/trip/01-ibis-2.jpg",
-      "assets/trip/01-ibis-3.jpg"
-    ],
-    "kindLabel": "住宿"
-  },
-  {
-    "day": "7/31",
-    "dayTitle": "(7/31) C團 抵達清州",
-    "kind": "stay",
-    "title": "Hotel Stendhal",
-    "links": [
-      {
-        "label": "Hotel Stendhal",
-        "href": "http://stendhalhotel.co.kr/?ckattempt=1"
-      },
-      {
-        "label": "MAP",
-        "href": "https://naver.me/5S9jq06W"
-      }
-    ],
-    "description": [
-      "Stendhal Hotel, 14 Oncheonbuk-ro, Yuseong District, Daejeon, Korea"
-    ],
-    "images": [
-      "assets/trip/02-hotel-stendhal-1.jpg",
-      "assets/trip/02-hotel-stendhal-2.jpg",
-      "assets/trip/02-hotel-stendhal-3.jpg"
-    ],
-    "kindLabel": "住宿"
-  },
-  {
     "day": "8/1",
     "dayTitle": "(8/1) 大田集合往扶餘 2026.08.01 (六)",
     "kind": "food",
