@@ -662,8 +662,7 @@ main {
   color: #fff;
 }
 
-.day-group,
-.notice {
+.day-group {
   margin-bottom: 14px;
 }
 
@@ -676,25 +675,6 @@ main {
 .day-title span {
   color: var(--muted);
   font-size: 0.82rem;
-}
-
-.notice {
-  display: grid;
-  gap: 4px;
-  padding: 12px;
-  border: 1px solid #e5d1ad;
-  border-radius: 8px;
-  background: #fff8ec;
-  color: #5f3d0c;
-}
-
-.notice strong {
-  font-size: 0.86rem;
-}
-
-.notice span {
-  font-size: 0.9rem;
-  line-height: 1.45;
 }
 
 .groups {
