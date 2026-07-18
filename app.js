@@ -410,21 +410,21 @@ const locations = [
   {
     day: "8/5",
     dayTitle: "江華島一日行",
-    type: "spot",
-    city: "江華島",
-    name: "傳燈寺",
-    korean: "전등사",
-    url: naverSearch("전등사"),
-    note: "文件中 Day 7 日期疑似應為 8/5。此項為 Naver Map 搜尋連結。"
-  },
-  {
-    day: "8/5",
-    dayTitle: "江華島一日行",
     type: "food",
     city: "江華島",
     name: "江華風物市場",
     korean: "강화풍물시장",
     url: naverSearch("강화풍물시장"),
+    note: "文件中 Day 7 日期疑似應為 8/5。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/5",
+    dayTitle: "江華島一日行",
+    type: "spot",
+    city: "江華島",
+    name: "傳燈寺",
+    korean: "전등사",
+    url: naverSearch("전등사"),
     note: "文件中 Day 7 日期疑似應為 8/5。此項為 Naver Map 搜尋連結。"
   },
   {
