@@ -453,10 +453,10 @@ const locations = [
     dayTitle: "江華島一日行",
     type: "spot",
     city: "仁川",
-    name: "回程提醒：仁川機場第二航廈",
+    name: "8/6 回程提醒：仁川機場第二航廈",
     korean: "인천국제공항 제2여객터미널",
     url: naverSearch("인천국제공항 제2여객터미널"),
-    note: "09:30 旅館 check-out 出發。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。此項為 Naver Map 搜尋連結。",
+    note: "09:30 旅館 check-out 出發（使用 Uber 叫 Taxi XL 兩台）。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。此項為 Naver Map 搜尋連結。",
     skipParking: true
   }
 ];

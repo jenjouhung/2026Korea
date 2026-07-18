@@ -973,7 +973,7 @@ window.storyPlaceDetails = [
     "day": "8/5",
     "dayTitle": "(8/5) 江華島一日行",
     "kind": "spot",
-    "title": "回程提醒：仁川機場第二航廈",
+    "title": "8/6 回程提醒：仁川機場第二航廈",
     "links": [
       {
         "label": "仁川機場第二航廈",
@@ -981,7 +981,7 @@ window.storyPlaceDetails = [
       }
     ],
     "description": [
-      "09:30 旅館 check-out 出發。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。"
+      "09:30 旅館 check-out 出發（使用 Uber 叫 Taxi XL 兩台）。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。"
     ],
     "images": [],
     "kindLabel": "景點"
