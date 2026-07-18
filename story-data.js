@@ -24,6 +24,23 @@ window.storyPlaceDetails = [
     "day": "8/1",
     "dayTitle": "(8/1) 大田集合往扶餘 2026.08.01 (六)",
     "kind": "spot",
+    "title": "11:00 UBER 前往樂天租車大田店取車",
+    "links": [
+      {
+        "label": "NaverMap",
+        "href": "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EB%8C%80%EC%A0%84%EC%A7%80%EC%A0%90"
+      }
+    ],
+    "description": [
+      "11:00 從大田站一帶搭 UBER 前往樂天租車大田店取車，預計 12:00 取車完畢後開車前往扶餘。這是自駕行程正式開始的關鍵節點。"
+    ],
+    "images": [],
+    "kindLabel": "景點"
+  },
+  {
+    "day": "8/1",
+    "dayTitle": "(8/1) 大田集合往扶餘 2026.08.01 (六)",
+    "kind": "spot",
     "title": "定林寺址 （平濟塔）",
     "links": [
       {
@@ -933,6 +950,27 @@ window.storyPlaceDetails = [
       "assets/trip/41-3abd519f-2.jpg",
       "assets/trip/41-3abd519f-3.jpg"
     ],
+    "kindLabel": "景點"
+  },
+  {
+    "day": "8/5",
+    "dayTitle": "(8/5) 江華島一日行",
+    "kind": "spot",
+    "title": "15:00 出發前往仁川市區還車",
+    "links": [
+      {
+        "label": "還車地點",
+        "href": "https://map.naver.com/p/search/SEE%26SEE%20%EB%B9%8C%EB%94%A9%20%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%200328818000"
+      },
+      {
+        "label": "附近加油地點",
+        "href": "https://map.naver.com/p/search/SEE%26SEE%20%EB%B9%8C%EB%94%A9%20%EC%A3%BC%EB%B3%80%20%EC%A3%BC%EC%9C%A0%EC%86%8C"
+      }
+    ],
+    "description": [
+      "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。還車前請先加油，導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000。抵達後開入地下停車場，找標示 롯데렌터카 的專用車位，再到 2 樓 268 號樂天租車辦公室交車。"
+    ],
+    "images": [],
     "kindLabel": "景點"
   }
 ];
