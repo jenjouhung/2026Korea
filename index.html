@@ -52,6 +52,24 @@
           <h2>每天的節奏與重點</h2>
           <p>這裡保留一般參與者最需要知道的每日路線、主題、景點背景與代表圖片，讓大家在出發前或車上可以先理解今天會看到什麼。</p>
         </section>
+        <section class="story-toolbar" aria-label="篩選總覽地點">
+          <div class="filter-row" role="group" aria-label="總覽類型篩選">
+            <button class="story-filter-chip active" type="button" data-story-filter="all">全部</button>
+            <button class="story-filter-chip stay-filter" type="button" data-story-filter="stay">住宿</button>
+            <button class="story-filter-chip spot-filter" type="button" data-story-filter="spot">景點</button>
+            <button class="story-filter-chip food-filter" type="button" data-story-filter="food">美食</button>
+          </div>
+          <div class="date-row" role="group" aria-label="總覽日期篩選">
+            <button class="story-date-chip active" type="button" data-story-date="all">全部日期</button>
+            <button class="story-date-chip" type="button" data-story-date="7/30">7/30</button>
+            <button class="story-date-chip" type="button" data-story-date="7/31">7/31</button>
+            <button class="story-date-chip" type="button" data-story-date="8/1">8/1</button>
+            <button class="story-date-chip" type="button" data-story-date="8/2">8/2</button>
+            <button class="story-date-chip" type="button" data-story-date="8/3">8/3</button>
+            <button class="story-date-chip" type="button" data-story-date="8/4">8/4</button>
+            <button class="story-date-chip" type="button" data-story-date="8/5">8/5</button>
+          </div>
+        </section>
         <section id="itineraryDays" class="itinerary-days" aria-live="polite"></section>
       </section>
 

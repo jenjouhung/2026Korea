@@ -539,11 +539,15 @@ const homeView = document.querySelector("#homeView");
 const storyView = document.querySelector("#storyView");
 const navView = document.querySelector("#navView");
 const itineraryEl = document.querySelector("#itineraryDays");
+const storyFilterButtons = document.querySelectorAll(".story-filter-chip");
+const storyDateButtons = document.querySelectorAll(".story-date-chip");
 const filterButtons = document.querySelectorAll(".filter-chip");
 const dateButtons = document.querySelectorAll(".date-chip");
 const searchInput = document.querySelector("#searchInput");
 const groupsEl = document.querySelector("#locationGroups");
 
+let activeStoryFilter = "all";
+let activeStoryDate = "all";
 let activeFilter = "all";
 let activeDate = "all";
 
@@ -565,6 +569,12 @@ function setDateFilter(day) {
   activeDate = day;
   dateButtons.forEach((item) => item.classList.toggle("active", item.dataset.date === day));
   renderLocations();
+}
+
+function setStoryDateFilter(day) {
+  activeStoryDate = day;
+  storyDateButtons.forEach((item) => item.classList.toggle("active", item.dataset.storyDate === day));
+  renderItinerary();
 }
 
 function normalizeText(value) {
@@ -668,7 +678,10 @@ function createStoryPlaceBlock(place) {
 function createItineraryCard(day) {
   const article = document.createElement("article");
   article.className = "itinerary-card";
-  const storyPlaces = storyPlaceDetails.filter((place) => place.day === day.day);
+  const storyPlaces = storyPlaceDetails.filter((place) => {
+    const typeMatch = activeStoryFilter === "all" || place.kind === activeStoryFilter;
+    return place.day === day.day && typeMatch;
+  });
   article.innerHTML = `
     <img src="${day.image}" alt="${day.imageAlt}" loading="lazy">
     <div class="itinerary-content">
@@ -680,15 +693,6 @@ function createItineraryCard(day) {
       <ul class="highlight-list">
         ${day.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}
       </ul>
-      <div class="detail-section">
-        <h4>當日看點</h4>
-        ${day.details.map((detail) => `
-          <section class="detail-item">
-            <h5>${detail.name}</h5>
-            <p>${detail.text}</p>
-          </section>
-        `).join("")}
-      </div>
       ${storyPlaces.length ? `
         <div class="place-detail-section">
           <h4>地點介紹與照片</h4>
@@ -706,7 +710,20 @@ function createItineraryCard(day) {
 
 function renderItinerary() {
   itineraryEl.innerHTML = "";
-  itineraryDays.forEach((day) => itineraryEl.appendChild(createItineraryCard(day)));
+  const filteredDays = itineraryDays.filter((day) => {
+    const dateMatch = activeStoryDate === "all" || day.day === activeStoryDate;
+    const typeMatch =
+      activeStoryFilter === "all" ||
+      storyPlaceDetails.some((place) => place.day === day.day && place.kind === activeStoryFilter);
+    return dateMatch && typeMatch;
+  });
+
+  if (!filteredDays.length) {
+    itineraryEl.innerHTML = `<div class="empty">沒有符合條件的總覽內容。</div>`;
+    return;
+  }
+
+  filteredDays.forEach((day) => itineraryEl.appendChild(createItineraryCard(day)));
 }
 
 function renderLocations() {
@@ -750,6 +767,20 @@ filterButtons.forEach((button) => {
     activeFilter = button.dataset.filter;
     filterButtons.forEach((item) => item.classList.toggle("active", item === button));
     renderLocations();
+  });
+});
+
+storyFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeStoryFilter = button.dataset.storyFilter;
+    storyFilterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    renderItinerary();
+  });
+});
+
+storyDateButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setStoryDateFilter(button.dataset.storyDate);
   });
 });
 

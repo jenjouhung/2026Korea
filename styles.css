@@ -236,6 +236,19 @@ main {
   padding: 12px 2px 2px;
 }
 
+.story-toolbar {
+  position: sticky;
+  top: 63px;
+  z-index: 5;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  margin: 0 -12px 4px;
+  background: rgba(238, 244, 240, 0.94);
+  border-block: 1px solid rgba(216, 226, 220, 0.9);
+  backdrop-filter: blur(10px);
+}
+
 .itinerary-days {
   display: grid;
   gap: 18px;
@@ -285,38 +298,6 @@ main {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
-}
-
-.detail-section {
-  display: grid;
-  gap: 10px;
-  padding-top: 2px;
-}
-
-.detail-section h4 {
-  margin: 0;
-  color: var(--green-dark);
-  font-size: 0.92rem;
-  letter-spacing: 0;
-}
-
-.detail-item {
-  display: grid;
-  gap: 4px;
-  padding: 10px 0 0;
-  border-top: 1px solid rgba(98, 112, 106, 0.16);
-}
-
-.detail-item h5 {
-  margin: 0;
-  color: var(--text);
-  font-size: 0.98rem;
-  line-height: 1.35;
-  letter-spacing: 0;
-}
-
-.detail-item p {
-  font-size: 0.92rem;
 }
 
 .place-detail-section {
@@ -536,7 +517,8 @@ main {
   gap: 8px;
 }
 
-.filter-chip {
+.filter-chip,
+.story-filter-chip {
   min-height: 42px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -545,43 +527,50 @@ main {
   font-weight: 700;
 }
 
-.filter-chip.active {
+.filter-chip.active,
+.story-filter-chip.active {
   border-color: var(--green);
   background: var(--green);
   color: #fff;
 }
 
-.filter-chip.stay-filter {
+.filter-chip.stay-filter,
+.story-filter-chip.stay-filter {
   border-color: var(--stay-line);
   background: var(--stay-soft);
   color: var(--stay);
 }
 
-.filter-chip.spot-filter {
+.filter-chip.spot-filter,
+.story-filter-chip.spot-filter {
   border-color: var(--spot-line);
   background: var(--spot-soft);
   color: var(--spot);
 }
 
-.filter-chip.food-filter {
+.filter-chip.food-filter,
+.story-filter-chip.food-filter {
   border-color: var(--food-line);
   background: var(--food-soft);
   color: var(--food);
 }
 
-.filter-chip.stay-filter.active {
+.filter-chip.stay-filter.active,
+.story-filter-chip.stay-filter.active {
   border-color: var(--stay);
   background: var(--stay);
   color: #fff;
 }
 
-.filter-chip.spot-filter.active {
+.filter-chip.spot-filter.active,
+.story-filter-chip.spot-filter.active {
   border-color: var(--spot);
   background: var(--spot);
   color: #fff;
 }
 
-.filter-chip.food-filter.active {
+.filter-chip.food-filter.active,
+.story-filter-chip.food-filter.active {
   border-color: var(--food);
   background: var(--food);
   color: #fff;
@@ -600,7 +589,8 @@ main {
   display: none;
 }
 
-.date-chip {
+.date-chip,
+.story-date-chip {
   flex: 0 0 auto;
   min-width: 72px;
   min-height: 40px;
@@ -613,7 +603,8 @@ main {
   white-space: nowrap;
 }
 
-.date-chip.active {
+.date-chip.active,
+.story-date-chip.active {
   border-color: var(--green);
   background: var(--green);
   color: #fff;
