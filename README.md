@@ -30,6 +30,8 @@
 
 `story-data.js` 與 `assets/trip/` 是由 HTML 匯出檔擷取出的公開行程內容，包含旅程總覽使用的地點介紹、參考連結與壓縮圖片。原始 ZIP 與規劃資料不應直接發布到 GitHub Pages。
 
+首頁另提供 Google Drive 連結作為完整行程 PDF 下載入口。
+
 ## 圖片來源
 
 旅程總覽每日主圖仍使用外部代表圖。各地點介紹圖片則由使用者提供的 HTML 匯出檔轉成 `assets/trip/` 內的壓縮 JPG，供手機瀏覽時載入。

@@ -203,6 +203,58 @@ main {
   color: var(--stay);
 }
 
+.pdf-download {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  align-items: center;
+  min-height: 88px;
+  padding: 14px 16px;
+  border: 1px solid #d5c5df;
+  border-radius: 8px;
+  background: #fbf8fc;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.pdf-download::after {
+  content: "PDF";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: var(--shop);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  grid-row: 1 / span 3;
+  grid-column: 2;
+}
+
+.pdf-download span {
+  color: var(--shop);
+  font-size: 0.84rem;
+  font-weight: 900;
+  grid-column: 1;
+}
+
+.pdf-download strong {
+  font-size: 1.18rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  grid-column: 1;
+}
+
+.pdf-download small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  grid-column: 1;
+}
+
 .mode-switcher {
   position: sticky;
   top: 0;
