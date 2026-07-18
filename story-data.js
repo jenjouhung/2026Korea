@@ -409,7 +409,7 @@ window.storyPlaceDetails = [
       },
       {
         "label": "MAP",
-        "href": "https://naver.me/F88omljm"
+        "href": "https://map.naver.com/p/search/%ED%95%98%EB%A3%A8%EC%B9%B4%ED%8E%98%20%EB%B0%A4%EB%96%A1%EB%AA%85%EA%B0%80%20%EA%B3%B5%EC%A3%BC"
       }
     ],
     "description": [
@@ -434,7 +434,7 @@ window.storyPlaceDetails = [
       },
       {
         "label": "MAP",
-        "href": "https://naver.me/F88omljm"
+        "href": "https://map.naver.com/p/search/%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%EB%B0%A4%EB%A7%88%EC%9D%84%20%EA%B3%B5%EC%A3%BC"
       }
     ],
     "description": [

@@ -4,6 +4,12 @@ function naverSearch(query) {
 
 function parkingSearch(location) {
   if (location.type === "stay" || location.skipParking) return null;
+  if (location.parkingUrl) {
+    return {
+      label: location.parkingLabel || (location.type === "food" ? "附近公營停車" : "景點停車場"),
+      url: location.parkingUrl
+    };
+  }
   const query =
     location.type === "food"
       ? `${location.korean} 주변 공영주차장`
@@ -155,7 +161,9 @@ const locations = [
     name: "國立公州博物館",
     korean: "국립공주박물관",
     url: "https://naver.me/Gsj2Ootm",
-    note: "公州與忠清南道出土文物。"
+    note: "公州與忠清南道出土文物。",
+    parkingUrl: naverSearch("국립공주박물관 주차장 공주"),
+    parkingLabel: "博物館停車場"
   },
   {
     day: "8/2",
@@ -184,8 +192,10 @@ const locations = [
     city: "公州",
     name: "Lucia 的庭園",
     korean: "하루카페&밤떡명가",
-    url: "https://naver.me/F88omljm",
-    note: "栗子甜點與咖啡。"
+    url: naverSearch("하루카페 밤떡명가 공주"),
+    note: "栗子甜點與咖啡。此項為 Naver Map 搜尋連結。",
+    parkingUrl: naverSearch("하루카페 밤떡명가 주변 공영주차장"),
+    parkingLabel: "附近公營停車"
   },
   {
     day: "8/2",
@@ -194,8 +204,8 @@ const locations = [
     city: "公州",
     name: "栗子村麵包店",
     korean: "베이커리밤마을",
-    url: "https://naver.me/F88omljm",
-    note: "原規劃書連結與 Lucia 的庭園相同，出發前建議再確認。"
+    url: naverSearch("베이커리밤마을 공주"),
+    note: "栗子甜點與麵包名店。此項為 Naver Map 搜尋連結。"
   },
   {
     day: "8/2",
