@@ -144,7 +144,7 @@ const locations = [
     name: "Green Mate 獨立民宿",
     korean: "Green Mate",
     url: "https://naver.me/Fm31NkyW",
-    note: "8/1 扶餘住宿點；15:00 後入住，入住密碼出發前 48 小時於 Airbnb 取得。"
+    note: "8/1 扶餘住宿點；15:00 後入住，入住資訊出發前另行確認。"
   },
   {
     day: "8/2",
@@ -385,6 +385,160 @@ const typeLabels = {
 };
 
 const groupOrder = ["7/30", "7/31", "8/1", "8/2", "8/3", "8/4", "8/5"];
+const storyPlaceDetails = Array.isArray(window.storyPlaceDetails) ? window.storyPlaceDetails : [];
+const itineraryDays = [
+  {
+    day: "7/30",
+    title: "抵達首爾",
+    summary: "B 團先抵達首爾，住宿在仁寺洞一帶。這一天以安頓、休息與準備後續移動為主。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Incheon%20International%20Airport%20Station%2020150304%20114454.jpg",
+    imageAlt: "仁川國際機場站",
+    highlights: ["首爾仁寺洞", "IBIS 酒店", "先行抵達"],
+    details: [
+      {
+        name: "抵達與調整",
+        text: "先抵達的成員以進入韓國、前往住宿、整理行李與調整作息為主，保留體力給後面幾天較密集的移動。"
+      },
+      {
+        name: "仁寺洞周邊",
+        text: "住宿點在首爾傳統文化與餐飲都方便的區域，若還有精神，可用短距離散步熟悉韓國街區節奏。"
+      }
+    ]
+  },
+  {
+    day: "7/31",
+    title: "清州抵達與大田",
+    summary: "從清州機場銜接鐵路交通，移動到大田住宿，為隔天全員集合與自駕行程做準備。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Daejeon%20Station.jpg",
+    imageAlt: "大田站外觀",
+    highlights: ["清州機場火車站", "大田", "Hotel Stendhal"],
+    details: [
+      {
+        name: "清州進入韓國中部",
+        text: "這一天的重點是從清州順利接上鐵路與市區移動，讓大家逐步會合到大田。"
+      },
+      {
+        name: "大田作為集合點",
+        text: "大田位於韓國交通核心位置，隔天從這裡集合後展開往扶餘、公州、水原與仁川的自駕旅程。"
+      }
+    ]
+  },
+  {
+    day: "8/1",
+    title: "大田集合往扶餘",
+    summary: "旅程正式進入百濟文化核心區。從大田集合後前往扶餘，走訪定林寺址、宮南池、扶餘博物館與扶蘇山城。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/%EA%B6%81%EB%82%A8%EC%A7%80.jpg",
+    imageAlt: "扶餘宮南池水面與亭閣",
+    highlights: ["定林寺址", "宮南池", "扶蘇山城", "扶餘美食"],
+    details: [
+      {
+        name: "百濟古都扶餘",
+        text: "扶餘曾是百濟後期都城，行程會透過寺址、山城、博物館與庭園，把王都的宗教、政治與生活空間連起來。"
+      },
+      {
+        name: "定林寺址與扶蘇山城",
+        text: "定林寺址保留百濟佛教都城的尺度感，扶蘇山城則能看到王都防禦與地形之間的關係。"
+      },
+      {
+        name: "宮南池",
+        text: "宮南池是韓國早期人工庭園代表，夏季水面、蓮花與亭閣很適合拍照，也是這一天最有景觀感的停留點。"
+      }
+    ]
+  },
+  {
+    day: "8/2",
+    title: "扶餘與公州",
+    summary: "延續百濟主題，上午在扶餘百濟文化園區理解王都想像，下午轉往公州看武寧王陵與國立公州博物館。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Jeongnimsa%20Temple%2002.jpg",
+    imageAlt: "扶餘定林寺址五層石塔",
+    highlights: ["百濟文化園區", "武寧王陵", "國立公州博物館", "公州住宿"],
+    details: [
+      {
+        name: "從扶餘到公州",
+        text: "這天仍以百濟歷史為主軸，但空間從扶餘轉到公州，能比較兩座古都在地形與遺址保存上的差異。"
+      },
+      {
+        name: "武寧王陵",
+        text: "武寧王陵是理解百濟王室、墓葬文化與東亞交流的重要地點，也是公州行程中最核心的歷史節點。"
+      },
+      {
+        name: "公州博物館",
+        text: "博物館可把前面看到的陵墓、都城與文物線索整理起來，適合作為這一天歷史理解的收束。"
+      }
+    ]
+  },
+  {
+    day: "8/3",
+    title: "公州往水原",
+    summary: "上午看公山城與山城市場，午後長距離移動到水原。抵達後可用水原華城周邊、星空圖書館與排骨店作為晚間重點。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pavilion%20in%20Gongsanseong%20Fortress.jpg",
+    imageAlt: "公州公山城內的亭閣",
+    highlights: ["公山城", "山城市場", "水原星空圖書館", "水原排骨"],
+    details: [
+      {
+        name: "公山城",
+        text: "公山城是公州代表性的山城景觀，可從城牆、亭閣與河岸地形感受百濟王都防禦與城市位置。"
+      },
+      {
+        name: "山城市場",
+        text: "市場停留讓行程從古蹟轉到地方生活，可以補充餐食、飲料，也讓參與者看到公州日常面貌。"
+      },
+      {
+        name: "水原晚間安排",
+        text: "移動到水原後，星空圖書館與排骨餐廳比較偏城市休閒與美食，行程節奏會從古都轉向現代都市。"
+      }
+    ]
+  },
+  {
+    day: "8/4",
+    title: "水原往仁川",
+    summary: "上午以水原華城作為城市歷史亮點，之後往仁川移動，接上月尾島與松島住宿的海港城市節奏。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Hwaseong%20Fortress%2002.jpg",
+    imageAlt: "水原華城城牆",
+    highlights: ["水原華城", "月尾島", "松島", "Orakai Songdo Park Hotel"],
+    details: [
+      {
+        name: "水原華城",
+        text: "水原華城是朝鮮王朝後期重要城郭，兼具軍事防禦、城市規劃與王權展示，是與百濟古都不同時代的城市案例。"
+      },
+      {
+        name: "往仁川移動",
+        text: "下午轉往仁川後，景觀會從內陸歷史城市切換到港口、海邊與新市鎮，旅程視覺感會明顯改變。"
+      },
+      {
+        name: "月尾島與松島",
+        text: "月尾島帶有海邊遊憩氣氛，松島則是規劃型新市鎮，適合觀察韓國城市發展的另一種面貌。"
+      }
+    ]
+  },
+  {
+    day: "8/5",
+    title: "江華島一日行",
+    summary: "旅程最後一個完整日安排江華島，從高麗宮址、傳燈寺到風物市場，把歷史、寺院與地方市場串在一起。",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Jeongdeungsa%20%28Ganghwa%29%2013-01259.JPG",
+    imageAlt: "江華島傳燈寺建築",
+    highlights: ["高麗宮址", "傳燈寺", "江華風物市場"],
+    details: [
+      {
+        name: "江華島的歷史層次",
+        text: "江華島不是單純的郊遊地，它同時連著高麗時期、佛教寺院、海防與地方市場，是很適合收尾的歷史島嶼。"
+      },
+      {
+        name: "高麗宮址",
+        text: "高麗宮址可作為理解高麗王朝避難與政治中心轉移的入口，和前幾天的百濟、朝鮮城郭形成時代對照。"
+      },
+      {
+        name: "傳燈寺與風物市場",
+        text: "傳燈寺提供山林寺院與建築細節，風物市場則讓最後一天回到地方飲食與伴手禮的生活感。"
+      }
+    ]
+  }
+];
+
+const homeView = document.querySelector("#homeView");
+const storyView = document.querySelector("#storyView");
+const navView = document.querySelector("#navView");
+const itineraryEl = document.querySelector("#itineraryDays");
 const filterButtons = document.querySelectorAll(".filter-chip");
 const dateButtons = document.querySelectorAll(".date-chip");
 const searchInput = document.querySelector("#searchInput");
@@ -392,6 +546,26 @@ const groupsEl = document.querySelector("#locationGroups");
 
 let activeFilter = "all";
 let activeDate = "all";
+
+function setMode(mode) {
+  const targetMode = ["home", "story", "nav"].includes(mode) ? mode : "home";
+  homeView.hidden = targetMode !== "home";
+  storyView.hidden = targetMode !== "story";
+  navView.hidden = targetMode !== "nav";
+  document.body.dataset.mode = targetMode;
+
+  if (window.location.hash !== `#${targetMode}`) {
+    history.replaceState(null, "", targetMode === "home" ? window.location.pathname : `#${targetMode}`);
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function setDateFilter(day) {
+  activeDate = day;
+  dateButtons.forEach((item) => item.classList.toggle("active", item.dataset.date === day));
+  renderLocations();
+}
 
 function normalizeText(value) {
   return value.toLowerCase().trim();
@@ -434,6 +608,105 @@ function createLocationCard(location) {
   `;
 
   return article;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function storyKindClass(kind) {
+  return ["stay", "spot", "food", "shop"].includes(kind) ? kind : "spot";
+}
+
+function createStoryPlaceBlock(place) {
+  const paragraphs = Array.isArray(place.description) ? place.description.filter(Boolean) : [];
+  const images = Array.isArray(place.images) ? place.images.filter(Boolean) : [];
+  const links = Array.isArray(place.links) ? place.links.filter((link) => link.href) : [];
+  const kind = storyKindClass(place.kind);
+  const firstParagraph = paragraphs[0] || "";
+  const extraParagraphs = paragraphs.slice(1);
+  const navigationLink = links.find((link) => /naver|map/i.test(`${link.label} ${link.href}`));
+  const sourceLinks = links.filter((link) => link !== navigationLink).slice(0, 2);
+
+  return `
+    <section class="story-place ${kind}-story">
+      <div class="story-place-top">
+        <span class="story-place-kind ${kind}">${escapeHtml(place.kindLabel || typeLabels[kind] || "地點")}</span>
+        <h5>${escapeHtml(place.title)}</h5>
+      </div>
+      ${images.length ? `
+        <div class="place-gallery" aria-label="${escapeHtml(place.title)}圖片">
+          ${images.map((src, index) => `
+            <img src="${escapeHtml(src)}" alt="${escapeHtml(place.title)} 圖片 ${index + 1}" loading="lazy">
+          `).join("")}
+        </div>
+      ` : ""}
+      ${firstParagraph ? `<p>${escapeHtml(firstParagraph)}</p>` : ""}
+      ${extraParagraphs.length ? `
+        <details class="story-more">
+          <summary>更多介紹</summary>
+          ${extraParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        </details>
+      ` : ""}
+      ${links.length ? `
+        <div class="story-place-links">
+          ${navigationLink ? `<a href="${escapeHtml(navigationLink.href)}" target="_blank" rel="noopener">Naver Map</a>` : ""}
+          ${sourceLinks.map((link) => `
+            <a href="${escapeHtml(link.href)}" target="_blank" rel="noopener">${escapeHtml(link.label || "參考資料")}</a>
+          `).join("")}
+        </div>
+      ` : ""}
+    </section>
+  `;
+}
+
+function createItineraryCard(day) {
+  const article = document.createElement("article");
+  article.className = "itinerary-card";
+  const storyPlaces = storyPlaceDetails.filter((place) => place.day === day.day);
+  article.innerHTML = `
+    <img src="${day.image}" alt="${day.imageAlt}" loading="lazy">
+    <div class="itinerary-content">
+      <div class="itinerary-top">
+        <span class="itinerary-date">${day.day}</span>
+        <h3>${day.title}</h3>
+      </div>
+      <p>${day.summary}</p>
+      <ul class="highlight-list">
+        ${day.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}
+      </ul>
+      <div class="detail-section">
+        <h4>當日看點</h4>
+        ${day.details.map((detail) => `
+          <section class="detail-item">
+            <h5>${detail.name}</h5>
+            <p>${detail.text}</p>
+          </section>
+        `).join("")}
+      </div>
+      ${storyPlaces.length ? `
+        <div class="place-detail-section">
+          <h4>地點介紹與照片</h4>
+          <div class="story-place-list">
+            ${storyPlaces.map(createStoryPlaceBlock).join("")}
+          </div>
+        </div>
+      ` : ""}
+      <button class="story-nav-link" type="button" data-day-nav="${day.day}">需要開車時，開啟這天導航</button>
+    </div>
+  `;
+
+  return article;
+}
+
+function renderItinerary() {
+  itineraryEl.innerHTML = "";
+  itineraryDays.forEach((day) => itineraryEl.appendChild(createItineraryCard(day)));
 }
 
 function renderLocations() {
@@ -482,15 +755,30 @@ filterButtons.forEach((button) => {
 
 dateButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    activeDate = button.dataset.date;
-    dateButtons.forEach((item) => item.classList.toggle("active", item === button));
-    renderLocations();
+    setDateFilter(button.dataset.date);
   });
 });
 
 searchInput.addEventListener("input", renderLocations);
 
+window.addEventListener("hashchange", () => {
+  setMode(window.location.hash.replace("#", "") || "home");
+});
+
 document.addEventListener("click", async (event) => {
+  const modeButton = event.target.closest("[data-mode-target]");
+  if (modeButton) {
+    setMode(modeButton.dataset.modeTarget);
+    return;
+  }
+
+  const dayNavButton = event.target.closest("[data-day-nav]");
+  if (dayNavButton) {
+    setMode("nav");
+    setDateFilter(dayNavButton.dataset.dayNav);
+    return;
+  }
+
   const button = event.target.closest(".copy-button");
   if (!button) return;
 
@@ -506,4 +794,6 @@ document.addEventListener("click", async (event) => {
   }
 });
 
+renderItinerary();
 renderLocations();
+setMode(window.location.hash.replace("#", "") || "home");
