@@ -168,6 +168,16 @@ const locations = [
   {
     day: "8/2",
     dayTitle: "扶餘與公州",
+    type: "spot",
+    city: "公州",
+    name: "公州韓屋村",
+    korean: "공주한옥마을",
+    url: naverSearch("공주한옥마을"),
+    note: "位於宋山里古墳群與國立公州博物館之間。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/2",
+    dayTitle: "扶餘與公州",
     type: "food",
     city: "公州",
     name: "梅香蕎麥麵",
@@ -321,6 +331,16 @@ const locations = [
     day: "8/4",
     dayTitle: "水原往仁川",
     type: "spot",
+    city: "光明",
+    name: "光明洞窟",
+    korean: "광명동굴",
+    url: "https://naver.me/Gsj2JVjA",
+    note: "洞穴主題公園，規劃書中的 8/4 重要景點。"
+  },
+  {
+    day: "8/4",
+    dayTitle: "水原往仁川",
+    type: "spot",
     city: "仁川",
     name: "月尾島",
     korean: "월미도",
@@ -338,6 +358,26 @@ const locations = [
     note: "8/4-8/5 仁川松島住宿點。"
   },
   {
+    day: "8/4",
+    dayTitle: "水原往仁川",
+    type: "spot",
+    city: "仁川",
+    name: "樂天超市松島店",
+    korean: "롯데마트 송도점",
+    url: naverSearch("롯데마트 송도점"),
+    note: "Orakai Songdo Park Hotel 對面的大型超市。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/4",
+    dayTitle: "水原往仁川",
+    type: "spot",
+    city: "仁川",
+    name: "現代名牌折扣購物中心",
+    korean: "현대프리미엄아울렛 송도점",
+    url: "https://naver.me/GfCs1xXH",
+    note: "松島 outlet，飯店附近可安排晚餐或購物。"
+  },
+  {
     day: "8/5",
     dayTitle: "江華島一日行",
     type: "spot",
@@ -346,6 +386,26 @@ const locations = [
     korean: "고려궁지",
     url: naverSearch("고려궁지"),
     note: "文件中 Day 7 日期疑似應為 8/5。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/5",
+    dayTitle: "江華島一日行",
+    type: "spot",
+    city: "江華島",
+    name: "江華山城西門",
+    korean: "강화산성 서문",
+    url: "https://naver.me/F2nV21cm",
+    note: "江華山城相關景點。"
+  },
+  {
+    day: "8/5",
+    dayTitle: "江華島一日行",
+    type: "food",
+    city: "江華島",
+    name: "朝陽紡織咖啡",
+    korean: "조양방직",
+    url: "https://naver.me/5mI0JnOK",
+    note: "改建紡織工廠而成的復古咖啡廳。"
   },
   {
     day: "8/5",
@@ -366,6 +426,16 @@ const locations = [
     korean: "강화풍물시장",
     url: naverSearch("강화풍물시장"),
     note: "文件中 Day 7 日期疑似應為 8/5。此項為 Naver Map 搜尋連結。"
+  },
+  {
+    day: "8/5",
+    dayTitle: "江華島一日行",
+    type: "spot",
+    city: "江華島",
+    name: "江華斜坡滑車",
+    korean: "강화루지",
+    url: "https://naver.me/GzE9s0g3",
+    note: "江華海岸渡假村內的斜坡滑車體驗設施。"
   },
   {
     day: "8/5",
