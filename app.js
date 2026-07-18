@@ -192,8 +192,8 @@ const locations = [
     city: "公州",
     name: "Lucia 的庭園",
     korean: "하루카페&밤떡명가",
-    url: naverSearch("하루카페 밤떡명가 공주"),
-    note: "栗子甜點與咖啡。此項為 Naver Map 搜尋連結。",
+    url: "https://naver.me/FcmABZH8",
+    note: "栗子甜點與咖啡。",
     parkingUrl: naverSearch("하루카페 밤떡명가 주변 공영주차장"),
     parkingLabel: "附近公營停車"
   },
@@ -204,8 +204,8 @@ const locations = [
     city: "公州",
     name: "栗子村麵包店",
     korean: "베이커리밤마을",
-    url: naverSearch("베이커리밤마을 공주"),
-    note: "栗子甜點與麵包名店。此項為 Naver Map 搜尋連結。"
+    url: "https://naver.me/5Rh0tqf8",
+    note: "栗子甜點與麵包名店。"
   },
   {
     day: "8/2",
