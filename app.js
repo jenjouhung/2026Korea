@@ -447,6 +447,17 @@ const locations = [
     url: naverSearch("인천광역시 남동구 예술로 198 SEE&SEE 빌딩"),
     note: "15:00 出發前往仁川市區還車，行車約 1 小時 10 分。導航可設為「SEE&SEE 빌딩」或輸入電話 0328818000；抵達後開入地下停車場，找 롯데렌터카 專用車位，或停在無障礙/一般空位後，再到 2 樓 268 號辦公室交車。",
     skipParking: true
+  },
+  {
+    day: "8/5",
+    dayTitle: "江華島一日行",
+    type: "spot",
+    city: "仁川",
+    name: "回程提醒：仁川機場第二航廈",
+    korean: "인천국제공항 제2여객터미널",
+    url: naverSearch("인천국제공항 제2여객터미널"),
+    note: "09:30 旅館 check-out 出發。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。此項為 Naver Map 搜尋連結。",
+    skipParking: true
   }
 ];
 

@@ -968,5 +968,22 @@ window.storyPlaceDetails = [
     ],
     "images": [],
     "kindLabel": "景點"
+  },
+  {
+    "day": "8/5",
+    "dayTitle": "(8/5) 江華島一日行",
+    "kind": "spot",
+    "title": "回程提醒：仁川機場第二航廈",
+    "links": [
+      {
+        "label": "仁川機場第二航廈",
+        "href": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD%20%EC%A0%9C2%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90"
+      }
+    ],
+    "description": [
+      "09:30 旅館 check-out 出發。回程班機：8/6 仁川機場第二航廈，華航 CI161，12:45 起飛，14:20 抵達台北桃園。"
+    ],
+    "images": [],
+    "kindLabel": "景點"
   }
 ];
